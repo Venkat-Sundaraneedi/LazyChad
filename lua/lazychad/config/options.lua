@@ -52,6 +52,8 @@ vim.g.trouble_lualine = true
 local opt = vim.opt
 
 opt.autowrite = true -- Enable auto write
+opt.autoread = true -- Enable auto read
+
 -- only set clipboard if not in ssh, to make sure the OSC 52
 -- integration works automatically. Requires Neovim >= 0.10.0
 opt.cmdheight = 1
@@ -82,6 +84,7 @@ opt.linebreak = true -- Wrap lines at convenient points
 opt.list = true -- Show some invisible characters (tabs...
 opt.mouse = "a" -- Enable mouse mode
 opt.number = true -- Print line number
+opt.numberwidth = 2
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
 opt.relativenumber = true -- Relative line numbers
