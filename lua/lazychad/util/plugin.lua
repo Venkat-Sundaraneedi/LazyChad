@@ -21,7 +21,7 @@ M.deprecated_extras = {
   ["lazychad.plugins.extras.editor.trouble-v3"] = "Trouble v3 has been merged in main",
   ["lazychad.plugins.extras.lang.python-semshi"] = [[The python-semshi extra has been removed,
   because it's causing too many issues.
-  Either use `basedpyright`, or copy the [old extra](https://github.com/LazyChad/LazyChad/blob/c1f5fcf9c7ed2659c9d5ac41b3bb8a93e0a3c6a0/lua/lazychad/plugins/extras/lang/python-semshi.lua#L1) to your own config.
+  Either use `basedpyright`, or copy the [old extra](https://github.com/Venkat-Sundaraneedi/LazyChad/blob/c1f5fcf9c7ed2659c9d5ac41b3bb8a93e0a3c6a0/lua/lazychad/plugins/extras/lang/python-semshi.lua#L1) to your own config.
   ]],
 }
 

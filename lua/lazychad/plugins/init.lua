@@ -12,7 +12,7 @@ require("lazychad.config").init()
 
 return {
   { "folke/lazy.nvim", version = "*" },
-  { "LazyChad/LazyChad", priority = 10000, lazy = false, opts = {}, cond = true, version = "*" },
+  { "Venkat-Sundaraneedi/LazyChad", priority = 10000, lazy = false, opts = {}, cond = true, version = "*" },
   {
     "folke/snacks.nvim",
     priority = 1000,

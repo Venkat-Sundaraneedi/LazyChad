@@ -69,7 +69,7 @@ return {
     },
   },
   {
-    "LazyChad/LazyChad",
+    "Venkat-Sundaraneedi/LazyChad",
     config = function(_, opts)
       opts = opts or {}
       -- disable the colorscheme
