@@ -18,7 +18,7 @@ return {
       end,
       desc = "Explorer Snacks (cwd)",
     },
-    { "<leader>e", "<leader>fe", desc = "Explorer Snacks (root dir)", remap = true },
+    { "q", "<leader>fe", desc = "Explorer Snacks (root dir)", remap = true },
     { "<leader>E", "<leader>fE", desc = "Explorer Snacks (cwd)", remap = true },
   },
 }
