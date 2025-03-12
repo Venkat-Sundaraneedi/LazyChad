@@ -357,7 +357,7 @@ function M.get_defaults()
       { name = "nvim-cmp", extra = "coding.nvim-cmp" },
     },
     explorer = {
-      { name = "snacks", extra = "editor.snacks_explorer" },
+      --{ name = "snacks", extra = "editor.snacks_explorer" },
       { name = "neo-tree", extra = "editor.neo-tree" },
     },
   }
