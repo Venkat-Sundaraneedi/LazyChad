@@ -114,6 +114,7 @@ return {
     end,
     ---@param opts PluginLspOpts
     config = function(_, opts)
+      dofile(vim.g.base46_cache .. "lsp")
       -- setup autoformat
       LazyChad.format.register(LazyChad.lsp.formatter())
 
@@ -270,6 +271,7 @@ return {
     },
     ---@param opts MasonSettings | {ensure_installed: string[]}
     config = function(_, opts)
+      dofile(vim.g.base46_cache .. "mason")
       require("mason").setup(opts)
       local mr = require("mason-registry")
       mr:on("package:install:success", function()
