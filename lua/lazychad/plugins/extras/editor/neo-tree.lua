@@ -6,21 +6,19 @@ return {
     cmd = "Neotree",
     keys = {
       {
-        "<leader>fe",
+        "q",
         function()
           require("neo-tree.command").execute({ toggle = true, dir = LazyChad.root() })
         end,
         desc = "Explorer NeoTree (Root Dir)",
       },
       {
-        "<leader>fE",
+        "<leader>e",
         function()
           require("neo-tree.command").execute({ toggle = true, dir = vim.uv.cwd() })
         end,
         desc = "Explorer NeoTree (cwd)",
       },
-      { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (Root Dir)", remap = true },
-      { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
       {
         "<leader>ge",
         function()
@@ -63,12 +61,28 @@ return {
       open_files_do_not_replace_types = { "terminal", "Trouble", "trouble", "qf", "Outline" },
       filesystem = {
         bind_to_cwd = false,
-        follow_current_file = { enabled = true },
+        follow_current_file = { enabled = false },
         use_libuv_file_watcher = true,
       },
       window = {
+        position = "right", -- left, right, top, bottom, float, current
+        width = 40, -- applies to left and right positions
+        height = 15, -- applies to top and bottom positions
+        auto_expand_width = true, -- expand the window when file exceeds the window width. does not work with position = "float"
+        popup = { -- settings that apply to float position only
+          size = {
+            height = "80%",
+            width = "50%",
+          },
+          position = "50%", -- 50% means center it
+          title = function(state) -- format the text that appears at the top of a popup window
+            return "Neo-tree " .. state.name:gsub("^%l", string.upper)
+          end,
+        },
         mappings = {
           ["l"] = "open",
+          ["w"] = "navigate_up",
+          ["e"] = "set_root",
           ["h"] = "close_node",
           ["<space>"] = "none",
           ["Y"] = {
