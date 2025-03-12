@@ -1,3 +1,8 @@
+pcall(function()
+  dofile(vim.g.base46_cache .. "syntax")
+  dofile(vim.g.base46_cache .. "treesitter")
+end)
+
 return {
   {
     "folke/which-key.nvim",
@@ -12,6 +17,7 @@ return {
   -- Treesitter is a new parser generator tool that we can
   -- use in Neovim to power faster and more accurate
   -- syntax highlighting.
+
   {
     "nvim-treesitter/nvim-treesitter",
     version = false, -- last release is way too old and doesn't work on Windows
@@ -36,7 +42,7 @@ return {
     ---@type TSConfig
     ---@diagnostic disable-next-line: missing-fields
     opts = {
-      highlight = { enable = true },
+      highlight = { enable = true, use_languagetree = true },
       indent = { enable = true },
       ensure_installed = {
         "bash",
