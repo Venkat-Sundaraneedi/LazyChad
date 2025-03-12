@@ -155,6 +155,8 @@ return {
       },
     },
     opts = function()
+      dofile(vim.g.base46_cache .. "telescope")
+
       local actions = require("telescope.actions")
 
       local open_with_trouble = function(...)
@@ -187,10 +189,20 @@ return {
 
       return {
         defaults = {
-          prompt_prefix = " ",
+          prompt_prefix = "   ",
           selection_caret = " ",
           -- open files in the first window that is an actual file.
           -- use the current window if no other window is available.
+          sorting_strategy = "ascending",
+          layout_config = {
+            horizontal = {
+              prompt_position = "top",
+              preview_width = 0.55,
+            },
+            width = 0.87,
+            height = 0.80,
+          },
+
           get_selection_window = function()
             local wins = vim.api.nvim_list_wins()
             table.insert(wins, 1, vim.api.nvim_get_current_win())
@@ -218,6 +230,8 @@ return {
             },
           },
         },
+        extensions_list = { "themes", "terms" },
+        extensions = {},
         pickers = {
           find_files = {
             find_command = find_command,
