@@ -13,7 +13,7 @@ function M.setup()
   vim.schedule(function()
     if LazyChad.config.news.lazychad then
       if not LazyChad.config.json.data.news["NEWS.md"] then
-        M.welcome()
+        --M.welcome()
       end
       M.lazychad(true)
     end
@@ -23,9 +23,9 @@ function M.setup()
   end)
 end
 
-function M.welcome()
-  LazyChad.info("Welcome to LazyChad!")
-end
+-- function M.welcome()
+--   LazyChad.info("Welcome to LazyChad!")
+-- end
 
 function M.changelog()
   M.open("CHANGELOG.md", { plugin = "LazyChad" })
