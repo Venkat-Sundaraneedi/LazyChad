@@ -339,8 +339,8 @@ function M.get_defaults()
   ---@type table<string, LazyChadDefault[]>
   local checks = {
     picker = {
-      -- { name = "snacks", extra = "editor.snacks_picker" },
-      { name = "fzf", extra = "editor.fzf" },
+      { name = "snacks", extra = "editor.snacks_picker" },
+      --{ name = "fzf", extra = "editor.fzf" },
       -- { name = "telescope", extra = "editor.telescope" },
     },
     cmp = {
