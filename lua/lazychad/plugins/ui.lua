@@ -276,7 +276,7 @@ return {
     "snacks.nvim",
     opts = {
       dashboard = {
-        enabled = true,
+        enabled = false,
         preset = {
           pick = function(cmd, opts)
             return LazyChad.pick(cmd, opts)()
