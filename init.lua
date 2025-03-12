@@ -4,7 +4,7 @@ vim.api.nvim_echo({
     "ErrorMsg",
   },
   {
-    "Please check the docs on how to get started with LazyVim\n",
+    "Please check the docs on how to get started with LazyChad\n",
     "WarningMsg",
   },
   { "Press any key to exit", "MoreMsg" },
