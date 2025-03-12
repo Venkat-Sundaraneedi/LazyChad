@@ -54,6 +54,7 @@ local opt = vim.opt
 opt.autowrite = true -- Enable auto write
 -- only set clipboard if not in ssh, to make sure the OSC 52
 -- integration works automatically. Requires Neovim >= 0.10.0
+opt.cmdheight = 1
 opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
 opt.completeopt = "menu,menuone,noselect"
 opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
@@ -76,7 +77,7 @@ opt.grepprg = "rg --vimgrep"
 opt.ignorecase = true -- Ignore case
 opt.inccommand = "nosplit" -- preview incremental substitute
 opt.jumpoptions = "view"
-opt.laststatus = 3 -- global statusline
+opt.laststatus = 0 -- global statusline
 opt.linebreak = true -- Wrap lines at convenient points
 opt.list = true -- Show some invisible characters (tabs...
 opt.mouse = "a" -- Enable mouse mode
