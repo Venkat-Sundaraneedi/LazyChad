@@ -341,7 +341,7 @@ function M.get_defaults()
     picker = {
       -- { name = "snacks", extra = "editor.snacks_picker" },
       -- { name = "fzf", extra = "editor.fzf" },
-      { name = "telescope", extra = "editor.telescope" },
+      -- { name = "telescope", extra = "editor.telescope" },
     },
     cmp = {
       { name = "blink.cmp", extra = "coding.blink", enabled = vim.fn.has("nvim-0.10") == 1 },
