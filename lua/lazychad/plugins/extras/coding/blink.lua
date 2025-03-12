@@ -162,7 +162,8 @@ return {
     "saghen/blink.cmp",
     opts = function(_, opts)
       opts.appearance = opts.appearance or {}
-      opts.appearance.kind_icons = vim.tbl_extend("force", opts.appearance.kind_icons or {}, LazyChad.config.icons.kinds)
+      opts.appearance.kind_icons =
+        vim.tbl_extend("force", opts.appearance.kind_icons or {}, LazyChad.config.icons.kinds)
     end,
   },
 
@@ -181,14 +182,6 @@ return {
           },
         },
       },
-    },
-  },
-  -- catppuccin support
-  {
-    "catppuccin",
-    optional = true,
-    opts = {
-      integrations = { blink_cmp = true },
     },
   },
 }

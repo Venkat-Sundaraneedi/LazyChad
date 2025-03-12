@@ -10,7 +10,6 @@ local LazyUtil = require("lazy.core.util")
 ---@field plugin lazychad.util.plugin
 ---@field extras lazychad.util.extras
 ---@field inject lazychad.util.inject
----@field news lazychad.util.news
 ---@field json lazychad.util.json
 ---@field lualine lazychad.util.lualine
 ---@field mini lazychad.util.mini

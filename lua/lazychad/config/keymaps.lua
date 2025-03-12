@@ -194,8 +194,6 @@ end, { desc = "Git Browse (copy)" })
 map("n", "<leader>ui", vim.show_pos, { desc = "Inspect Pos" })
 map("n", "<leader>uI", function() vim.treesitter.inspect_tree() vim.api.nvim_input("I") end, { desc = "Inspect Tree" })
 
--- LazyChad Changelog
-map("n", "<leader>L", function() LazyChad.news.changelog() end, { desc = "LazyChad Changelog" })
 
 -- floating terminal
 map("n", "<leader>fT", function() Snacks.terminal() end, { desc = "Terminal (cwd)" })
