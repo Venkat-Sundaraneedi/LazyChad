@@ -69,7 +69,7 @@ autocmd("FileType", {
     "dbout",
     "gitsigns-blame",
     "grug-far",
-    "help",
+    -- "help",
     "lspinfo",
     "neotest-output",
     "neotest-output-panel",
