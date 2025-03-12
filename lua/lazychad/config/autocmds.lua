@@ -3,6 +3,12 @@
 -- //========== autocmds ==========//
 
 local autocmd = vim.api.nvim_create_autocmd
+local cmd = vim.api.nvim_create_user_command
+
+-- themes
+cmd("Nvthemes", function()
+  require("nvchad.themes").open()
+end, { desc = "Open NvChad themes with Telescope" })
 
 local function augroup(name)
   return vim.api.nvim_create_augroup("lazychad_" .. name, { clear = true })
