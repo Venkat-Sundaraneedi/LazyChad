@@ -1,6 +1,6 @@
 return {
   "epwalsh/obsidian.nvim",
-  lazy = true,
+  event = "VeryLazy",
   version = "*", -- recommended, use latest release instead of latest commit
   -- lazy = true,
   ft = "markdown",
