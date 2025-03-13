@@ -195,15 +195,13 @@ return {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
-      views = {
-        cmdline_popup = {
-          border = {
-            style = "none",
-            padding = { 2, 3 },
+      cmdline = {
+        format = {
+          search_down = {
+            view = "cmdline",
           },
-          filter_options = {},
-          win_options = {
-            winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+          search_up = {
+            view = "cmdline",
           },
         },
       },
