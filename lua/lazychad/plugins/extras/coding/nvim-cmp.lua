@@ -42,8 +42,8 @@ return {
           ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
           ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
           ["<C-Space>"] = cmp.mapping.complete(),
-          -- ["<CR>"] = LazyChad.cmp.confirm({ select = auto_select }),
-          ["<C-y>"] = LazyChad.cmp.confirm({ select = true }),
+          ["<CR>"] = LazyChad.cmp.confirm({ select = auto_select }),
+          -- ["<C-y>"] = LazyChad.cmp.confirm({ select = true }),
           -- ["<S-CR>"] = LazyChad.cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
           ["<C-CR>"] = function(fallback)
             cmp.abort()
