@@ -253,16 +253,8 @@ return {
         end)
       end
 
-      -- Store the original signature help handler first
-      local orig_signature_help = vim.lsp.handlers["textDocument/signatureHelp"]
-
-      -- Then replace with modified version that disables automatic popups in insert mode
-      vim.lsp.handlers["textDocument/signatureHelp"] = function(...)
-        -- Only show signature help when not in insert mode
-        if vim.api.nvim_get_mode().mode ~= "i" then
-          return orig_signature_help(...)
-        end
-      end
+      -- Completely disable signature help popups
+      vim.lsp.handlers["textDocument/signatureHelp"] = function() end
     end,
   },
 
