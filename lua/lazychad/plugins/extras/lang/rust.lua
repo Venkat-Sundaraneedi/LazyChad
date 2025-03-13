@@ -72,7 +72,7 @@ return {
           -- rust-analyzer language server configuration
           ["rust-analyzer"] = {
             rustfmt = {
-              extraArgs = { "--config", "tab_spaces=2,indent_style=block,indent_width=2" },
+              extraArgs = { "--config", "tab_spaces=4,indent_style=block,indent_width=2" },
             },
             cargo = {
               allFeatures = true,
