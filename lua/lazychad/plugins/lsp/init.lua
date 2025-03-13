@@ -252,9 +252,6 @@ return {
           return false
         end)
       end
-
-      -- Completely disable signature help popups
-      vim.lsp.handlers["textDocument/signatureHelp"] = function() end
     end,
   },
 

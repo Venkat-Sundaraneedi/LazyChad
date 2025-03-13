@@ -74,6 +74,16 @@ return {
             rustfmt = {
               extraArgs = { "--config", "tab_spaces=4" },
             },
+            -- Add this setting to disable signature help
+            server = {
+              capabilities = {
+                signatureHelpProvider = false,
+              },
+            },
+            -- This disables inlay hints which might also be contributing to the issue
+            inlayHints = {
+              enable = false,
+            },
             cargo = {
               allFeatures = true,
               loadOutDirsFromCheck = true,
