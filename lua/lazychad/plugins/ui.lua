@@ -254,8 +254,8 @@ return {
         enabled = true,
         --     priority = 1,
         --     enabled = true, -- enable indent guides
-        only_scope = true, -- only show indent guides of the scope
-        only_current = true, -- only show indent guides in the current window
+        only_scope = false, -- only show indent guides of the scope
+        only_current = false, -- only show indent guides in the current window
       },
       input = { enabled = true },
       notifier = { enabled = false },
