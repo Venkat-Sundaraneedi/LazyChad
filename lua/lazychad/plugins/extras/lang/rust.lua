@@ -30,7 +30,7 @@ return {
         enabled = true,
         actions = true,
         completion = true,
-        hover = true,
+        hover = false,
       },
     },
   },
