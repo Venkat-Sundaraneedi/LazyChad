@@ -1,12 +1,21 @@
 return {
   -- plenary , volt , menu
+  -- {
+  --   "nvim-lua/plenary.nvim",
+  --   event = "VeryLazy",
+  -- },
   {
     "NvChad/NvChad",
-    "nvim-lua/plenary.nvim",
-    "nvchad/volt",
-    "nvchad/menu",
+    event = "VeryLazy",
   },
-
+  {
+    "nvchad/volt",
+    event = "VeryLazy",
+  },
+  {
+    "nvchad/menu",
+    event = "VeryLazy",
+  },
   -- base46
   {
     "nvchad/base46",
@@ -25,7 +34,8 @@ return {
   },
 
   -- minty
-  { "nvchad/minty", cmd = { "Huefy", "Shades" } },
+  { "nvchad/minty", event = "VeryLazy", 
+cmd = { "Huefy", "Shades" } },
 
   --web-devicons
   -- {
@@ -38,7 +48,7 @@ return {
   -- icons
   {
     "echasnovski/mini.icons",
-    lazy = true,
+    event = "VeryLazy",
     opts = {
       file = {
         [".keep"] = { glyph = "≤░èó", hl = "MiniIconsGrey" },
