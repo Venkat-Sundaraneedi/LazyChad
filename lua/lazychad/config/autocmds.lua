@@ -209,3 +209,11 @@ vim.api.nvim_create_autocmd("BufLeave", {
     })
   end,
 })
+
+-- Add this to your LSP configuration
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  -- Setting focusable to false will prevent the hover window from automatically gaining focus
+  focusable = false,
+  -- Setting auto_focus to false prevents automatic focusing
+  auto_focus = false,
+})
