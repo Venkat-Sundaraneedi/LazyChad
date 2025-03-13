@@ -252,6 +252,33 @@ return {
           return false
         end)
       end
+      -- Store the original hover handler
+      local orig_hover_handler = vim.lsp.handlers["textDocument/hover"]
+
+      -- Replace with a custom handler that tracks how it was triggered
+      vim.lsp.handlers["textDocument/hover"] = function(_, result, ctx, config)
+        -- Get the stack trace to determine where this request came from
+        local info = debug.getinfo(4, "n")
+
+        -- If this was triggered by autocomplete/signature help, block it
+        -- The name will be something like 'on_hover' or similar for automatic triggers
+        if info and info.name and info.name ~= "buf_hover" then
+          return nil
+        end
+
+        -- Otherwise, proceed with the original handler
+        return orig_hover_handler(_, result, ctx, config)
+      end
+
+      -- Wrap the buf_hover function to mark it as coming from a keymap
+      local orig_buf_hover = vim.lsp.buf.hover
+      vim.lsp.buf.hover = function()
+        -- Set a flag in vim state to indicate this was manually triggered
+        vim._manual_hover_triggered = true
+        local result = orig_buf_hover()
+        vim._manual_hover_triggered = false
+        return result
+      end
     end,
   },
 
