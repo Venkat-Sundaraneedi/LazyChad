@@ -71,6 +71,9 @@ return {
         default_settings = {
           -- rust-analyzer language server configuration
           ["rust-analyzer"] = {
+            rustfmt = {
+              extraArgs = { "--config", "tab_spaces=4" },
+            },
             cargo = {
               allFeatures = true,
               loadOutDirsFromCheck = true,
